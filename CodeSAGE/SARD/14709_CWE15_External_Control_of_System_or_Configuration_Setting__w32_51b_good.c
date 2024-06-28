@@ -1,0 +1,10 @@
+#ifndef VAR1
+void FUN1(char * VAR2)
+{
+ if (!FUN2(VAR2))
+ {
+ FUN3("");
+ FUN4(1);
+ }
+}
+#endif

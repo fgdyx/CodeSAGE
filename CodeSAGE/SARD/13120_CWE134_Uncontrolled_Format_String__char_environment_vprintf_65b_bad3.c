@@ -1,0 +1,12 @@
+#ifndef VAR1
+void FUN1(char * VAR2, ...)
+{
+ {
+ va_list VAR3;
+ FUN2(VAR3, VAR2);
+ /* POTENTIAL FLAW: Do not specify the format allowing a possible format string vulnerability */
+ FUN3(VAR2, VAR3);
+ FUN4(VAR3);
+ }
+}
+#endif

@@ -1,0 +1,11 @@
+#ifndef VAR1
+void FUN1(wchar_t * VAR2)
+{
+ {
+ ofstream VAR3;
+ /* POTENTIAL FLAW: Possibly opening a file without validating the file name or path */
+ VAR3.open((char *)VAR2);
+ VAR3.close();
+ }
+}
+#endif

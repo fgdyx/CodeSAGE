@@ -1,0 +1,27 @@
+#ifndef VAR1
+#VAR2 ""
+#VAR2 ""
+namespace VAR3
+{
+VAR4::FUN1(char * VAR5)
+{
+ VAR6 = VAR5;
+ memset(VAR6, '', 50-1);
+ VAR6[50-1] = '';
+}
+VAR4::~FUN1()
+{
+ {
+ char VAR7[50] = "";
+ size_t VAR8, VAR9;
+ VAR9 = strlen(VAR6);
+ for (VAR8 = 0; VAR8 < VAR9; VAR8++)
+ {
+ VAR7[VAR8] = VAR6[VAR8];
+ }
+ VAR7[50-1] = '';
+ FUN2(VAR6);
+ }
+}
+}
+#endif

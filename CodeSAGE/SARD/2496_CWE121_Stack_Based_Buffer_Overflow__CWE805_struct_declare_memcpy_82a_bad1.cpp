@@ -1,0 +1,14 @@
+#ifndef VAR1
+void FUN1()
+{
+ VAR2 * VAR3;
+ twoIntsStruct VAR4[50];
+ twoIntsStruct VAR5[100];
+ /* FLAW: Set a pointer to a "small" buffer. This buffer will be used in the sinks as a destination
+ * buffer in various memory copying functions using a "large" source buffer. */
+ VAR3 = VAR4;
+ VAR6* VAR7 = new VAR8;
+ VAR7->FUN2(VAR3);
+ delete VAR7;
+}
+#endif

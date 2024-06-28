@@ -1,0 +1,22 @@
+#ifndef VAR1
+void FUN1(VAR2<VAR3> VAR4);
+static void FUN2()
+{
+ badStruct VAR5;
+ VAR2<VAR3> VAR4;
+ linkedList VAR6 = { &VAR6, &VAR6 };
+ VAR5.VAR2.VAR7 = VAR6.VAR7;
+ VAR5.VAR2.VAR8 = VAR6.VAR8;
+ VAR6.VAR7 = &VAR5.VAR2;
+ VAR6.VAR8 = &VAR5.VAR2;
+ ;
+ VAR4.FUN3(VAR5);
+ VAR4.FUN3(VAR5);
+ VAR4.FUN3(VAR5);
+ FUN1(VAR4);
+}
+void FUN4()
+{
+ FUN2();
+}
+#endif

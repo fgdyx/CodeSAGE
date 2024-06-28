@@ -1,0 +1,18 @@
+#ifndef VAR1
+static void FUN1()
+{
+ char * VAR2;
+ char VAR3[100] = "";
+ VAR2 = VAR3;
+ while(1)
+ {
+ strcat(VAR2, "");
+ break;
+ }
+ FUN2(VAR4, VAR4, VAR5, VAR6, VAR7, NULL);
+}
+void FUN3()
+{
+ FUN1();
+}
+#endif

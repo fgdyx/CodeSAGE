@@ -1,0 +1,38 @@
+#ifndef VAR1
+static void FUN1()
+{
+ int VAR2,VAR3;
+ VAR4 * VAR5;
+ VAR5 = NULL;
+ for(VAR2 = 0; VAR2 < 1; VAR2++)
+ {
+ VAR5 = new VAR4;
+ *VAR5 = 5LL;
+ delete VAR5;
+ }
+ for(VAR3 = 0; VAR3 < 1; VAR3++)
+ {
+ ;
+ }
+}
+static void FUN2()
+{
+ int VAR6,VAR7;
+ VAR4 * VAR5;
+ VAR5 = NULL;
+ for(VAR6 = 0; VAR6 < 1; VAR6++)
+ {
+ VAR5 = new VAR4;
+ *VAR5 = 5LL;
+ }
+ for(VAR7 = 0; VAR7 < 1; VAR7++)
+ {
+ FUN3(*VAR5);
+ }
+}
+void FUN4()
+{
+ FUN1();
+ FUN2();
+}
+#endif

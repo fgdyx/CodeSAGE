@@ -1,0 +1,86 @@
+#ifndef VAR1
+void FUN1()
+{
+ short VAR2;
+ VAR2 = 0;
+ switch(6)
+ {
+ case 6:
+ {
+#ifdef VAR3
+ WSADATA VAR4;
+ int VAR5 = 0;
+#endif
+ int VAR6;
+ int VAR7;
+ struct sockaddr_in VAR8;
+ SOCKET VAR9 = VAR10;
+ char VAR11[VAR12];
+ do
+ {
+#ifdef VAR3
+ if (FUN2(FUN3(2,2), &VAR4) != VAR13)
+ {
+ break;
+ }
+ VAR5 = 1;
+#endif
+ VAR9 = socket(VAR14, VAR15, VAR16);
+ if (VAR9 == VAR10)
+ {
+ break;
+ }
+ memset(&VAR8, 0, sizeof(VAR8));
+ VAR8.VAR17 = VAR14;
+ VAR8.VAR18.VAR19 = FUN4(VAR20);
+ VAR8.VAR21 = FUN5(VAR22);
+ if (connect(VAR9, (struct VAR23*)&VAR8, sizeof(VAR8)) == VAR24)
+ {
+ break;
+ }
+ /* FLAW: Use a value input from the network */
+ VAR6 = recv(VAR9, VAR11, VAR12 - 1, 0);
+ if (VAR6 == VAR24 || VAR6 == 0)
+ {
+ break;
+ }
+ VAR11[VAR6] = '';
+ VAR7 = FUN6(VAR11);
+ if (VAR7 > VAR25 || VAR7 < VAR26)
+ {
+ VAR2 = -1;
+ }
+ else
+ {
+ VAR2 = VAR7;
+ }
+ }
+ while (0);
+ if (VAR9 != VAR10)
+ {
+ FUN7(VAR9);
+ }
+#ifdef VAR3
+ if (VAR5)
+ {
+ FUN8();
+ }
+#endif
+ }
+ break;
+ default:
+ FUN9("");
+ break;
+ }
+ if (VAR2 < 100)
+ {
+ /* POTENTIAL FLAW: malloc() takes a size_t (unsigned int) as input and therefore if it is negative,
+ * the conversion will cause malloc() to allocate a very large amount of data or fail */
+ char * VAR27 = (char *)malloc(VAR2);
+ memset(VAR27, '', VAR2-1);
+ VAR27[VAR2-1] = '';
+ FUN9(VAR27);
+ free(VAR27);
+ }
+}
+#endif

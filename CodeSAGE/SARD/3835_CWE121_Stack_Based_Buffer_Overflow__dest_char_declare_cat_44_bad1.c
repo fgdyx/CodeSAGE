@@ -1,0 +1,25 @@
+#ifndef VAR1
+static void FUN1(char * VAR2)
+{
+ {
+ char VAR3[100];
+ memset(VAR3, '', 100-1);
+ VAR3[100-1] = '';
+ /* POTENTIAL FLAW: Possible buffer overflow if the sizeof(data)-strlen(data) is less than the length of source */
+ strcat(VAR2, VAR3);
+ FUN2(VAR2);
+ }
+}
+void FUN3()
+{
+ char * VAR2;
+ void (*VAR4) (char *) = VAR5;
+ char VAR6[50];
+ char VAR7[100];
+ /* FLAW: Set a pointer to a "small" buffer. This buffer will be used in the sinks as a destination
+ * buffer in various memory copying functions using a "large" source buffer. */
+ VAR2 = VAR6;
+ VAR2[0] = '';
+ FUN4(VAR2);
+}
+#endif
